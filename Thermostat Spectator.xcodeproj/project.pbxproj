@@ -1,0 +1,294 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		D57C85731BE6B54300B6F9DA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D57C85721BE6B54300B6F9DA /* AppDelegate.swift */; };
+		D57C85751BE6B54300B6F9DA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D57C85741BE6B54300B6F9DA /* ViewController.swift */; };
+		D57C85781BE6B54300B6F9DA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D57C85761BE6B54300B6F9DA /* Main.storyboard */; };
+		D57C857A1BE6B54300B6F9DA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D57C85791BE6B54300B6F9DA /* Assets.xcassets */; };
+		D57C857D1BE6B54300B6F9DA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D57C857B1BE6B54300B6F9DA /* LaunchScreen.storyboard */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		D57C856F1BE6B54300B6F9DA /* Thermostat Spectator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Thermostat Spectator.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D57C85721BE6B54300B6F9DA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		D57C85741BE6B54300B6F9DA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		D57C85771BE6B54300B6F9DA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		D57C85791BE6B54300B6F9DA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		D57C857C1BE6B54300B6F9DA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		D57C857E1BE6B54300B6F9DA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D57C856C1BE6B54300B6F9DA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		D57C85661BE6B54300B6F9DA = {
+			isa = PBXGroup;
+			children = (
+				D57C85711BE6B54300B6F9DA /* Thermostat Spectator */,
+				D57C85701BE6B54300B6F9DA /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		D57C85701BE6B54300B6F9DA /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D57C856F1BE6B54300B6F9DA /* Thermostat Spectator.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D57C85711BE6B54300B6F9DA /* Thermostat Spectator */ = {
+			isa = PBXGroup;
+			children = (
+				D57C85721BE6B54300B6F9DA /* AppDelegate.swift */,
+				D57C85741BE6B54300B6F9DA /* ViewController.swift */,
+				D57C85761BE6B54300B6F9DA /* Main.storyboard */,
+				D57C85791BE6B54300B6F9DA /* Assets.xcassets */,
+				D57C857B1BE6B54300B6F9DA /* LaunchScreen.storyboard */,
+				D57C857E1BE6B54300B6F9DA /* Info.plist */,
+			);
+			path = "Thermostat Spectator";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		D57C856E1BE6B54300B6F9DA /* Thermostat Spectator */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D57C85811BE6B54300B6F9DA /* Build configuration list for PBXNativeTarget "Thermostat Spectator" */;
+			buildPhases = (
+				D57C856B1BE6B54300B6F9DA /* Sources */,
+				D57C856C1BE6B54300B6F9DA /* Frameworks */,
+				D57C856D1BE6B54300B6F9DA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Thermostat Spectator";
+			productName = "Thermostat Spectator";
+			productReference = D57C856F1BE6B54300B6F9DA /* Thermostat Spectator.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D57C85671BE6B54300B6F9DA /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0710;
+				LastUpgradeCheck = 0710;
+				ORGANIZATIONNAME = "Christopher Dumas";
+				TargetAttributes = {
+					D57C856E1BE6B54300B6F9DA = {
+						CreatedOnToolsVersion = 7.1;
+						DevelopmentTeam = QQAJZCPBWE;
+					};
+				};
+			};
+			buildConfigurationList = D57C856A1BE6B54300B6F9DA /* Build configuration list for PBXProject "Thermostat Spectator" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = D57C85661BE6B54300B6F9DA;
+			productRefGroup = D57C85701BE6B54300B6F9DA /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D57C856E1BE6B54300B6F9DA /* Thermostat Spectator */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		D57C856D1BE6B54300B6F9DA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D57C857D1BE6B54300B6F9DA /* LaunchScreen.storyboard in Resources */,
+				D57C857A1BE6B54300B6F9DA /* Assets.xcassets in Resources */,
+				D57C85781BE6B54300B6F9DA /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D57C856B1BE6B54300B6F9DA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D57C85751BE6B54300B6F9DA /* ViewController.swift in Sources */,
+				D57C85731BE6B54300B6F9DA /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		D57C85761BE6B54300B6F9DA /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D57C85771BE6B54300B6F9DA /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		D57C857B1BE6B54300B6F9DA /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D57C857C1BE6B54300B6F9DA /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		D57C857F1BE6B54300B6F9DA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		D57C85801BE6B54300B6F9DA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		D57C85821BE6B54300B6F9DA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "Thermostat Spectator/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "titoniumworks.github.io.Thermostat-Spectator";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		D57C85831BE6B54300B6F9DA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "Thermostat Spectator/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "titoniumworks.github.io.Thermostat-Spectator";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		D57C856A1BE6B54300B6F9DA /* Build configuration list for PBXProject "Thermostat Spectator" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D57C857F1BE6B54300B6F9DA /* Debug */,
+				D57C85801BE6B54300B6F9DA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D57C85811BE6B54300B6F9DA /* Build configuration list for PBXNativeTarget "Thermostat Spectator" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D57C85821BE6B54300B6F9DA /* Debug */,
+				D57C85831BE6B54300B6F9DA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D57C85671BE6B54300B6F9DA /* Project object */;
+}
