@@ -54,70 +54,113 @@ class ViewController: UIViewController {
     @IBOutlet weak var goal: UILabel!
     @IBOutlet weak var current: UILabel!
     @IBOutlet weak var progress: UIProgressView!
-    
     @IBOutlet weak var downB: UIButton!
     @IBOutlet weak var upB: UIButton!
+    @IBOutlet weak var prefixControl: UISegmentedControl!
+    
     var goalTemp: Float = 76
     var currentTemp: Float = 76
     var canCool = true
     var canHeat = true
+    var state = "cooling"
     var measurement = "F"
     var accessToken: String? = ""
     
     @IBAction func up(sender: AnyObject) {
-        
+        goalTemp++;
+        updateInterface() // TODO: Acutally send information to thermostat.
     }
     
     @IBAction func down(sender: AnyObject) {
+        goalTemp--;
+        updateInterface() // TODO: Acutally send information to thermostat.
+    }
+    
+    @IBAction func prefixChange(sender: UISegmentedControl) {
+        if(prefixControl.selectedSegmentIndex == 0) {
+            measurement = "F"
+        } else if(prefixControl.selectedSegmentIndex == 1) {
+            measurement = "C"
+        }
         
+        updateInformation()
     }
     
     var textField: UITextField?
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        performSegueWithIdentifier("authorize", sender: self)
-        
-        let alert = UIAlertController(title: "Authorization Pin Number", message: "Enter the pin number that you got on the previous page.", preferredStyle:
-            UIAlertControllerStyle.Alert)
-        
-        alert.addTextFieldWithConfigurationHandler({ (textField) in
-            textField.placeholder = "Pin"
-            self.textField = textField
-        })
-        
-        var pin = ""
-        
-        alert.addAction(UIAlertAction(title: "Cancel", style: UIAlertActionStyle.Default, handler: { (UIAlertAction) in
-            print("Cancel")
-        }))
-            
-        alert.addAction(UIAlertAction(title: "Authorize", style: UIAlertActionStyle.Default, handler: { (UIAlertAction) in
-            pin = self.textField!.text!
-            
-            let request = NSMutableURLRequest(URL: NSURL(string: "https://api.home.nest.com/oauth2/access_token")!)
-            request.HTTPMethod = "POST"
-            let postString = "code=\(pin)&client_id=5ed3998f-34ec-40d2-83c1-057284ecc948&client_secret=CqUsOU73GJzTyxkQF03ZEElIE&grant_type=authorization_code"
-            request.HTTPBody = postString.dataUsingEncoding(NSUTF8StringEncoding)
-            let task = NSURLSession.sharedSession().dataTaskWithRequest(request) {
-                data, response, error in
-                
-                if error != nil {
-                    print("\(error)")
-                    return
-                }
-                
-                self.accessToken = NSString(data: data!, encoding: NSUTF8StringEncoding) as? String
-            }
-            task.resume()
-            
-            self.updateInformation()
-        }))
-        presentViewController(alert, animated: true, completion: nil)
-        
+        authorize()
         // Do any additional setup after loading the view, typically from a nib.
         navigationController?.navigationBar.barTintColor = UIColor(hexString: "#00afd8")
         navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.whiteColor()]
+    }
+    
+    func authorize() {
+        let defaults = NSUserDefaults.standardUserDefaults()
+        
+        if let at = defaults.stringForKey("accessToken") {
+            self.accessToken = at
+            print(self.accessToken)
+            self.updateInformation()
+        } else {
+            performSegueWithIdentifier("authorize", sender: self)
+            
+            let alert = UIAlertController(title: "Authorization Pin Number", message: "Enter the pin number that you got on the previous page.", preferredStyle:
+                UIAlertControllerStyle.Alert)
+            
+            alert.addTextFieldWithConfigurationHandler({ (textField) in
+                textField.placeholder = "Pin"
+                self.textField = textField
+            })
+            
+            var pin = ""
+            
+            alert.addAction(UIAlertAction(title: "Cancel", style: UIAlertActionStyle.Default, handler: { (UIAlertAction) in
+                print("Cancel")
+            }))
+            
+            alert.addAction(UIAlertAction(title: "Authorize", style: UIAlertActionStyle.Default, handler: { (UIAlertAction) in
+                pin = self.textField!.text!
+                
+                self.post("https://api.home.nest.com/oauth2/access_token", arguments: [
+                    "code": pin,
+                    "client_id": "18d350b8-616e-4112-8920-8d128261bcca",
+                    "client_secret": "IzfbN2HtRyp9lCBBK7X6xOhWs",
+                    "grant_type": "authorization_code"],
+                    completionHandler: { (data, response, error) in
+                        if error != nil {
+                            print("Error: \(error)")
+                            return
+                        }
+                        
+                        do {
+                            let parsedObject: AnyObject? = try NSJSONSerialization.JSONObjectWithData(data!, options: NSJSONReadingOptions.AllowFragments)
+                            self.accessToken = (parsedObject as? NSDictionary)!["access_token"] as? String
+                            
+                            defaults.setValue(self.accessToken!, forKey: "accessToken")
+                            defaults.synchronize()
+                        } catch _ {
+                            print("HELP")
+                        }
+                        self.updateInformation()
+                })
+            }))
+            presentViewController(alert, animated: true, completion: nil)
+        }
+        
+    }
+    
+    func post(url: String, arguments: [String: String],
+        completionHandler: (NSData?,
+        NSURLResponse?,
+        NSError?) -> Void) {
+            let request = NSMutableURLRequest(URL: NSURL(string: url)!)
+            request.HTTPMethod = "POST"
+            let postString = arguments.map({ "\($0)=\($1)" }).joinWithSeparator("&")
+            request.HTTPBody = postString.dataUsingEncoding(NSUTF8StringEncoding)
+            let task = NSURLSession.sharedSession().dataTaskWithRequest(request, completionHandler: completionHandler)
+            task.resume()
     }
     
     func updateInformation() {
@@ -125,7 +168,9 @@ class ViewController: UIViewController {
             let ref = Firebase(url: "wss://developer-api.nest.com")
             ref.authWithCustomToken(accessT, withCompletionBlock: { (e, r) in
                 if (e != nil) {
-                    print(e.localizedDescription)
+                    print("Error: \(e)")
+                    self.authorize()
+                    return
                 }
                 ref.observeEventType(.Value, withBlock: { (snapshot) in
                     let data = snapshot.value
@@ -146,17 +191,16 @@ class ViewController: UIViewController {
                     self.navigationController?.navigationBar.topItem?.title = (thermostat!.objectForKey("name") as! String)
                     
                     let state = thermostat!.objectForKey("hvac_state") as! String
-                    if state == "cooling" {
-                        self.progress.progressTintColor = UIColor(hexString: "#00afd8")
-                    } else if state == "heating" {
-                        self.progress.progressTintColor = UIColor.redColor()
-                    }
+                    self.state = state
                     
                     self.updateInterface()
                 }, withCancelBlock: { (e) in
-                    print(e.localizedDescription)
+                    print("Error: \(e)")
                 })
             })
+        } else {
+            print("Error: blank access token!")
+            self.authorize()
         }
     }
     
@@ -167,6 +211,12 @@ class ViewController: UIViewController {
             progress.progress = currentTemp / goalTemp
         } else if currentTemp >= goalTemp {
             progress.progress = goalTemp / currentTemp
+        }
+        
+        if self.state == "cooling" || self.goalTemp <= self.currentTemp {
+            self.progress.progressTintColor = UIColor(hexString: "#00afd8")
+        } else if self.state == "heating" || self.goalTemp >= self.currentTemp {
+            self.progress.progressTintColor = UIColor.redColor()
         }
     }
     

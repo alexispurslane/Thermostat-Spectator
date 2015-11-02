@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Navigation Controller-->
@@ -40,34 +41,41 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Epj-TL-Wdf">
                                         <rect key="frame" x="0.0" y="0.0" width="323" height="196"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cTF-Y6-oPT">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cTF-Y6-oPT">
                                                 <rect key="frame" x="254" y="56" width="61" height="62"/>
                                                 <animations/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="61" id="Duf-HA-feP"/>
+                                                    <constraint firstAttribute="height" constant="62" id="H1X-cj-OfO"/>
+                                                </constraints>
                                                 <state key="normal" title="Up" image="grey_up.png"/>
                                                 <connections>
                                                     <action selector="up:" destination="4Af-Kq-IVq" eventType="touchUpInside" id="F7w-vb-xOq"/>
                                                 </connections>
                                             </button>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Current: 39℉" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aRO-ai-Rei">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Current: 39℉" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aRO-ai-Rei">
                                                 <rect key="frame" x="121" y="87" width="106" height="21"/>
                                                 <animations/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="106" id="34n-8n-bwq"/>
+                                                </constraints>
                                                 <fontDescription key="fontDescription" type="system" weight="ultraLight" pointSize="17"/>
-                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="40℉" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fRl-oE-nHV">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="40℉" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fRl-oE-nHV">
                                                 <rect key="frame" x="121" y="13" width="118" height="79"/>
                                                 <animations/>
                                                 <fontDescription key="fontDescription" type="system" weight="black" pointSize="46"/>
-                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" fixedFrame="YES" progress="0.97499999999999998" translatesAutoresizingMaskIntoConstraints="NO" id="eDE-b7-gdu">
+                                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.97499999999999998" translatesAutoresizingMaskIntoConstraints="NO" id="eDE-b7-gdu">
                                                 <rect key="frame" x="0.0" y="194" width="323" height="2"/>
                                                 <animations/>
                                                 <color key="progressTintColor" red="0.32156862749999998" green="0.62352941179999999" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                             </progressView>
-                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cpj-O1-DYC">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cpj-O1-DYC">
                                                 <rect key="frame" x="254" y="124" width="61" height="62"/>
                                                 <animations/>
                                                 <state key="normal" title="Down" image="grey_down.png"/>
@@ -75,9 +83,44 @@
                                                     <action selector="down:" destination="4Af-Kq-IVq" eventType="touchUpInside" id="Nqk-Sw-BSf"/>
                                                 </connections>
                                             </button>
+                                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="sW1-zD-IXI">
+                                                <rect key="frame" x="8" y="158" width="121" height="29"/>
+                                                <animations/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="121" id="sSt-07-MN6"/>
+                                                </constraints>
+                                                <segments>
+                                                    <segment title="°F"/>
+                                                    <segment title="°C"/>
+                                                </segments>
+                                                <connections>
+                                                    <action selector="prefixChange:" destination="4Af-Kq-IVq" eventType="valueChanged" id="fwh-Tz-0a5"/>
+                                                </connections>
+                                            </segmentedControl>
                                         </subviews>
                                         <animations/>
                                         <color key="backgroundColor" red="0.92463596204188481" green="0.92463596204188481" blue="0.92463596204188481" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="bottom" secondItem="eDE-b7-gdu" secondAttribute="bottom" id="1Jk-oo-H7W"/>
+                                            <constraint firstItem="Cpj-O1-DYC" firstAttribute="leading" secondItem="cTF-Y6-oPT" secondAttribute="leading" id="4ga-jE-209"/>
+                                            <constraint firstItem="fRl-oE-nHV" firstAttribute="top" secondItem="Epj-TL-Wdf" secondAttribute="top" constant="13" id="9t2-Rw-3sz"/>
+                                            <constraint firstItem="sW1-zD-IXI" firstAttribute="top" secondItem="fRl-oE-nHV" secondAttribute="bottom" constant="66" id="AQT-gv-A1H"/>
+                                            <constraint firstItem="cTF-Y6-oPT" firstAttribute="trailing" secondItem="Epj-TL-Wdf" secondAttribute="trailingMargin" id="Bxj-Ve-fej"/>
+                                            <constraint firstItem="cTF-Y6-oPT" firstAttribute="leading" secondItem="aRO-ai-Rei" secondAttribute="trailing" constant="27" id="Cie-ZU-Tvg"/>
+                                            <constraint firstItem="Cpj-O1-DYC" firstAttribute="trailing" secondItem="cTF-Y6-oPT" secondAttribute="trailing" id="Ec3-De-Lyh"/>
+                                            <constraint firstItem="eDE-b7-gdu" firstAttribute="top" secondItem="Cpj-O1-DYC" secondAttribute="bottom" constant="8" symbolic="YES" id="GFT-a3-DhX"/>
+                                            <constraint firstAttribute="trailing" secondItem="eDE-b7-gdu" secondAttribute="trailing" id="HGb-rZ-VFF"/>
+                                            <constraint firstItem="sW1-zD-IXI" firstAttribute="leading" secondItem="Epj-TL-Wdf" secondAttribute="leadingMargin" id="Iq1-0C-uHi"/>
+                                            <constraint firstItem="aRO-ai-Rei" firstAttribute="leading" secondItem="fRl-oE-nHV" secondAttribute="leading" id="Lvh-0S-AiO"/>
+                                            <constraint firstItem="eDE-b7-gdu" firstAttribute="leading" secondItem="Epj-TL-Wdf" secondAttribute="leading" id="QYI-g0-8f8"/>
+                                            <constraint firstItem="aRO-ai-Rei" firstAttribute="top" secondItem="Epj-TL-Wdf" secondAttribute="top" constant="87" id="Uex-GO-6XA"/>
+                                            <constraint firstItem="cTF-Y6-oPT" firstAttribute="top" secondItem="Epj-TL-Wdf" secondAttribute="top" constant="56" id="Xeu-DL-Iyr"/>
+                                            <constraint firstItem="eDE-b7-gdu" firstAttribute="top" secondItem="sW1-zD-IXI" secondAttribute="bottom" constant="8" symbolic="YES" id="jHT-eK-Bvg"/>
+                                            <constraint firstItem="cTF-Y6-oPT" firstAttribute="leading" secondItem="fRl-oE-nHV" secondAttribute="trailing" constant="15" id="jY9-cn-9Fd"/>
+                                            <constraint firstItem="sW1-zD-IXI" firstAttribute="top" secondItem="aRO-ai-Rei" secondAttribute="bottom" constant="50" id="mZM-Ba-VAq"/>
+                                            <constraint firstItem="aRO-ai-Rei" firstAttribute="centerY" secondItem="Epj-TL-Wdf" secondAttribute="centerY" id="pOz-6X-FuW"/>
+                                            <constraint firstItem="Cpj-O1-DYC" firstAttribute="top" secondItem="cTF-Y6-oPT" secondAttribute="bottom" constant="6" id="rq5-hY-lcu"/>
+                                        </constraints>
                                     </view>
                                 </subviews>
                                 <animations/>
@@ -105,6 +148,7 @@
                         <outlet property="current" destination="aRO-ai-Rei" id="YCE-L1-zog"/>
                         <outlet property="downB" destination="Cpj-O1-DYC" id="gUa-AU-DNo"/>
                         <outlet property="goal" destination="fRl-oE-nHV" id="k1D-sj-RRS"/>
+                        <outlet property="prefixControl" destination="sW1-zD-IXI" id="xrG-Aq-NHO"/>
                         <outlet property="progress" destination="eDE-b7-gdu" id="Cga-0C-NCP"/>
                         <outlet property="upB" destination="cTF-Y6-oPT" id="bOa-yj-zjQ"/>
                     </connections>
