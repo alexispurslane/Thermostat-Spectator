@@ -7,13 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D555E0F21BE8128100B2F53D /* AuthorizeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D555E0F11BE8128100B2F53D /* AuthorizeViewController.swift */; };
 		D560A5331BE6CE34008E3BBF /* Firebase.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D560A5321BE6CE34008E3BBF /* Firebase.framework */; };
 		D560A5351BE6CE42008E3BBF /* libicucore.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = D560A5341BE6CE42008E3BBF /* libicucore.tbd */; };
 		D560A5371BE6CE4C008E3BBF /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = D560A5361BE6CE4C008E3BBF /* libc++.tbd */; };
 		D560A5391BE6CE53008E3BBF /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D560A5381BE6CE53008E3BBF /* CFNetwork.framework */; };
 		D560A53B1BE6CE5C008E3BBF /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D560A53A1BE6CE5C008E3BBF /* Security.framework */; };
 		D560A53D1BE6CE62008E3BBF /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D560A53C1BE6CE62008E3BBF /* SystemConfiguration.framework */; };
-		D560A5411BE70FFF008E3BBF /* AuthorizeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D560A5401BE70FFF008E3BBF /* AuthorizeViewController.swift */; };
 		D57C85731BE6B54300B6F9DA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D57C85721BE6B54300B6F9DA /* AppDelegate.swift */; };
 		D57C85751BE6B54300B6F9DA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D57C85741BE6B54300B6F9DA /* ViewController.swift */; };
 		D57C85781BE6B54300B6F9DA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D57C85761BE6B54300B6F9DA /* Main.storyboard */; };
@@ -25,13 +25,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		D555E0F11BE8128100B2F53D /* AuthorizeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthorizeViewController.swift; sourceTree = "<group>"; };
 		D560A5321BE6CE34008E3BBF /* Firebase.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Firebase.framework; sourceTree = "<group>"; };
 		D560A5341BE6CE42008E3BBF /* libicucore.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libicucore.tbd; path = usr/lib/libicucore.tbd; sourceTree = SDKROOT; };
 		D560A5361BE6CE4C008E3BBF /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
 		D560A5381BE6CE53008E3BBF /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
 		D560A53A1BE6CE5C008E3BBF /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		D560A53C1BE6CE62008E3BBF /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
-		D560A5401BE70FFF008E3BBF /* AuthorizeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthorizeViewController.swift; sourceTree = "<group>"; };
 		D57C856F1BE6B54300B6F9DA /* Thermostat Spectator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Thermostat Spectator.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D57C85721BE6B54300B6F9DA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D57C85741BE6B54300B6F9DA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -76,7 +76,6 @@
 		D57C85661BE6B54300B6F9DA = {
 			isa = PBXGroup;
 			children = (
-				D560A5401BE70FFF008E3BBF /* AuthorizeViewController.swift */,
 				D560A5321BE6CE34008E3BBF /* Firebase.framework */,
 				D57C85711BE6B54300B6F9DA /* Thermostat Spectator */,
 				D57C85701BE6B54300B6F9DA /* Products */,
@@ -98,6 +97,7 @@
 		D57C85711BE6B54300B6F9DA /* Thermostat Spectator */ = {
 			isa = PBXGroup;
 			children = (
+				D555E0F11BE8128100B2F53D /* AuthorizeViewController.swift */,
 				D57C85721BE6B54300B6F9DA /* AppDelegate.swift */,
 				D57C85741BE6B54300B6F9DA /* ViewController.swift */,
 				D57C85761BE6B54300B6F9DA /* Main.storyboard */,
@@ -185,7 +185,7 @@
 			files = (
 				D57C85751BE6B54300B6F9DA /* ViewController.swift in Sources */,
 				D57C85731BE6B54300B6F9DA /* AppDelegate.swift in Sources */,
-				D560A5411BE70FFF008E3BBF /* AuthorizeViewController.swift in Sources */,
+				D555E0F21BE8128100B2F53D /* AuthorizeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
