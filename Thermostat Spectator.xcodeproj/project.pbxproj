@@ -7,14 +7,31 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D560A5331BE6CE34008E3BBF /* Firebase.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D560A5321BE6CE34008E3BBF /* Firebase.framework */; };
+		D560A5351BE6CE42008E3BBF /* libicucore.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = D560A5341BE6CE42008E3BBF /* libicucore.tbd */; };
+		D560A5371BE6CE4C008E3BBF /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = D560A5361BE6CE4C008E3BBF /* libc++.tbd */; };
+		D560A5391BE6CE53008E3BBF /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D560A5381BE6CE53008E3BBF /* CFNetwork.framework */; };
+		D560A53B1BE6CE5C008E3BBF /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D560A53A1BE6CE5C008E3BBF /* Security.framework */; };
+		D560A53D1BE6CE62008E3BBF /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D560A53C1BE6CE62008E3BBF /* SystemConfiguration.framework */; };
+		D560A5411BE70FFF008E3BBF /* AuthorizeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D560A5401BE70FFF008E3BBF /* AuthorizeViewController.swift */; };
 		D57C85731BE6B54300B6F9DA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D57C85721BE6B54300B6F9DA /* AppDelegate.swift */; };
 		D57C85751BE6B54300B6F9DA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D57C85741BE6B54300B6F9DA /* ViewController.swift */; };
 		D57C85781BE6B54300B6F9DA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D57C85761BE6B54300B6F9DA /* Main.storyboard */; };
 		D57C857A1BE6B54300B6F9DA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D57C85791BE6B54300B6F9DA /* Assets.xcassets */; };
 		D57C857D1BE6B54300B6F9DA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D57C857B1BE6B54300B6F9DA /* LaunchScreen.storyboard */; };
+		D57C85851BE6BB4D00B6F9DA /* gn.png in Resources */ = {isa = PBXBuildFile; fileRef = D57C85841BE6BB4D00B6F9DA /* gn.png */; };
+		D57C85871BE6BC6900B6F9DA /* grey_up.png in Resources */ = {isa = PBXBuildFile; fileRef = D57C85861BE6BC6900B6F9DA /* grey_up.png */; };
+		D57C85891BE6BC8100B6F9DA /* grey_down.png in Resources */ = {isa = PBXBuildFile; fileRef = D57C85881BE6BC8100B6F9DA /* grey_down.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		D560A5321BE6CE34008E3BBF /* Firebase.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Firebase.framework; sourceTree = "<group>"; };
+		D560A5341BE6CE42008E3BBF /* libicucore.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libicucore.tbd; path = usr/lib/libicucore.tbd; sourceTree = SDKROOT; };
+		D560A5361BE6CE4C008E3BBF /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
+		D560A5381BE6CE53008E3BBF /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		D560A53A1BE6CE5C008E3BBF /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		D560A53C1BE6CE62008E3BBF /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		D560A5401BE70FFF008E3BBF /* AuthorizeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthorizeViewController.swift; sourceTree = "<group>"; };
 		D57C856F1BE6B54300B6F9DA /* Thermostat Spectator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Thermostat Spectator.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D57C85721BE6B54300B6F9DA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D57C85741BE6B54300B6F9DA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -22,6 +39,9 @@
 		D57C85791BE6B54300B6F9DA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D57C857C1BE6B54300B6F9DA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D57C857E1BE6B54300B6F9DA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D57C85841BE6BB4D00B6F9DA /* gn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = gn.png; sourceTree = "<group>"; };
+		D57C85861BE6BC6900B6F9DA /* grey_up.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = grey_up.png; sourceTree = "<group>"; };
+		D57C85881BE6BC8100B6F9DA /* grey_down.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = grey_down.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +49,41 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D560A53D1BE6CE62008E3BBF /* SystemConfiguration.framework in Frameworks */,
+				D560A53B1BE6CE5C008E3BBF /* Security.framework in Frameworks */,
+				D560A5391BE6CE53008E3BBF /* CFNetwork.framework in Frameworks */,
+				D560A5371BE6CE4C008E3BBF /* libc++.tbd in Frameworks */,
+				D560A5351BE6CE42008E3BBF /* libicucore.tbd in Frameworks */,
+				D560A5331BE6CE34008E3BBF /* Firebase.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		167C19D26BB05E61FFEC71AF /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D560A53C1BE6CE62008E3BBF /* SystemConfiguration.framework */,
+				D560A53A1BE6CE5C008E3BBF /* Security.framework */,
+				D560A5381BE6CE53008E3BBF /* CFNetwork.framework */,
+				D560A5361BE6CE4C008E3BBF /* libc++.tbd */,
+				D560A5341BE6CE42008E3BBF /* libicucore.tbd */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		D57C85661BE6B54300B6F9DA = {
 			isa = PBXGroup;
 			children = (
+				D560A5401BE70FFF008E3BBF /* AuthorizeViewController.swift */,
+				D560A5321BE6CE34008E3BBF /* Firebase.framework */,
 				D57C85711BE6B54300B6F9DA /* Thermostat Spectator */,
 				D57C85701BE6B54300B6F9DA /* Products */,
+				D57C85841BE6BB4D00B6F9DA /* gn.png */,
+				D57C85861BE6BC6900B6F9DA /* grey_up.png */,
+				D57C85881BE6BC8100B6F9DA /* grey_down.png */,
+				167C19D26BB05E61FFEC71AF /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -125,6 +169,9 @@
 			files = (
 				D57C857D1BE6B54300B6F9DA /* LaunchScreen.storyboard in Resources */,
 				D57C857A1BE6B54300B6F9DA /* Assets.xcassets in Resources */,
+				D57C85891BE6BC8100B6F9DA /* grey_down.png in Resources */,
+				D57C85871BE6BC6900B6F9DA /* grey_up.png in Resources */,
+				D57C85851BE6BB4D00B6F9DA /* gn.png in Resources */,
 				D57C85781BE6B54300B6F9DA /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -138,6 +185,7 @@
 			files = (
 				D57C85751BE6B54300B6F9DA /* ViewController.swift in Sources */,
 				D57C85731BE6B54300B6F9DA /* AppDelegate.swift in Sources */,
+				D560A5411BE70FFF008E3BBF /* AuthorizeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -250,6 +298,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = "Thermostat Spectator/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "titoniumworks.github.io.Thermostat-Spectator";
@@ -261,6 +313,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = "Thermostat Spectator/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "titoniumworks.github.io.Thermostat-Spectator";
@@ -287,6 +343,7 @@
 				D57C85831BE6B54300B6F9DA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -1,25 +1,182 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9059" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="cAB-gB-o5L">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
-        <scene sceneID="tne-QT-ifu">
+        <!--Navigation Controller-->
+        <scene sceneID="wDi-oP-oGf">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <navigationController id="cAB-gB-o5L" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Qeh-ZV-lKe">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <animations/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="4Af-Kq-IVq" kind="relationship" relationship="rootViewController" id="0Rs-Xb-xLL"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="D44-m3-d60" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="448" y="200"/>
+        </scene>
+        <!--Thermostat Spectator-->
+        <scene sceneID="kl3-Fh-YZQ">
+            <objects>
+                <viewController id="4Af-Kq-IVq" customClass="ViewController" customModule="Thermostat_Spectator" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
-                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                        <viewControllerLayoutGuide type="top" id="Lgk-de-pI5"/>
+                        <viewControllerLayoutGuide type="bottom" id="9c6-IC-jUs"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                    <view key="view" contentMode="scaleToFill" id="XSL-ea-7iZ">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="SPq-yx-qIl">
+                                <rect key="frame" x="139" y="202" width="323" height="196"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Epj-TL-Wdf">
+                                        <rect key="frame" x="0.0" y="0.0" width="323" height="196"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cTF-Y6-oPT">
+                                                <rect key="frame" x="254" y="56" width="61" height="62"/>
+                                                <animations/>
+                                                <state key="normal" title="Up" image="grey_up.png"/>
+                                                <connections>
+                                                    <action selector="up:" destination="4Af-Kq-IVq" eventType="touchUpInside" id="F7w-vb-xOq"/>
+                                                </connections>
+                                            </button>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Current: 39℉" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aRO-ai-Rei">
+                                                <rect key="frame" x="121" y="87" width="106" height="21"/>
+                                                <animations/>
+                                                <fontDescription key="fontDescription" type="system" weight="ultraLight" pointSize="17"/>
+                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="40℉" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fRl-oE-nHV">
+                                                <rect key="frame" x="121" y="13" width="118" height="79"/>
+                                                <animations/>
+                                                <fontDescription key="fontDescription" type="system" weight="black" pointSize="46"/>
+                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" fixedFrame="YES" progress="0.97499999999999998" translatesAutoresizingMaskIntoConstraints="NO" id="eDE-b7-gdu">
+                                                <rect key="frame" x="0.0" y="194" width="323" height="2"/>
+                                                <animations/>
+                                                <color key="progressTintColor" red="0.32156862749999998" green="0.62352941179999999" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            </progressView>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cpj-O1-DYC">
+                                                <rect key="frame" x="254" y="124" width="61" height="62"/>
+                                                <animations/>
+                                                <state key="normal" title="Down" image="grey_down.png"/>
+                                                <connections>
+                                                    <action selector="down:" destination="4Af-Kq-IVq" eventType="touchUpInside" id="Nqk-Sw-BSf"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <animations/>
+                                        <color key="backgroundColor" red="0.92463596204188481" green="0.92463596204188481" blue="0.92463596204188481" alpha="1" colorSpace="calibratedRGB"/>
+                                    </view>
+                                </subviews>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="323" id="ch8-GY-IC0"/>
+                                    <constraint firstAttribute="height" constant="196" id="gPz-G1-Uyx"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="SPq-yx-qIl" firstAttribute="centerX" secondItem="XSL-ea-7iZ" secondAttribute="centerX" id="ZsQ-Hj-tZj"/>
+                            <constraint firstItem="SPq-yx-qIl" firstAttribute="centerY" secondItem="XSL-ea-7iZ" secondAttribute="centerY" id="yTK-az-qYZ"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="Thermostat Spectator" id="g8f-GX-YDU">
+                        <barButtonItem key="rightBarButtonItem" id="Jwz-VL-PXx">
+                            <connections>
+                                <segue destination="g4F-TD-5tS" kind="show" identifier="authorize" id="4hd-cU-heN"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="current" destination="aRO-ai-Rei" id="YCE-L1-zog"/>
+                        <outlet property="downB" destination="Cpj-O1-DYC" id="gUa-AU-DNo"/>
+                        <outlet property="goal" destination="fRl-oE-nHV" id="k1D-sj-RRS"/>
+                        <outlet property="progress" destination="eDE-b7-gdu" id="Cga-0C-NCP"/>
+                        <outlet property="upB" destination="cTF-Y6-oPT" id="bOa-yj-zjQ"/>
+                    </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1gH-qc-yQw" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="1239" y="200"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="CGa-mq-HAJ">
+            <objects>
+                <navigationController id="g4F-TD-5tS" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="GGY-TW-IwD">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <animations/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="lUp-od-b6z" kind="relationship" relationship="rootViewController" id="4rT-R1-D9S"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="deE-Xo-FVP" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="448" y="926"/>
+        </scene>
+        <!--Authorize View Controller-->
+        <scene sceneID="cwF-BL-Q6h">
+            <objects>
+                <viewController id="lUp-od-b6z" customClass="AuthorizeViewController" customModule="Thermostat_Spectator" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="o5v-6u-bqg"/>
+                        <viewControllerLayoutGuide type="bottom" id="dPk-o2-ZfX"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="rsW-HV-kdT">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" scalesPageToFit="YES" translatesAutoresizingMaskIntoConstraints="NO" id="FFM-uc-QWG">
+                                <rect key="frame" x="0.0" y="64" width="600" height="536"/>
+                                <animations/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="deviceRGB"/>
+                                <dataDetectorType key="dataDetectorTypes" phoneNumber="YES" link="YES" address="YES" calendarEvent="YES"/>
+                            </webView>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="FFM-uc-QWG" firstAttribute="bottom" secondItem="dPk-o2-ZfX" secondAttribute="top" id="65i-Ui-g6b"/>
+                            <constraint firstItem="FFM-uc-QWG" firstAttribute="top" secondItem="o5v-6u-bqg" secondAttribute="bottom" id="6TX-9J-oVA"/>
+                            <constraint firstItem="FFM-uc-QWG" firstAttribute="leading" secondItem="rsW-HV-kdT" secondAttribute="leading" id="Oq0-1v-3au"/>
+                            <constraint firstAttribute="trailing" secondItem="FFM-uc-QWG" secondAttribute="trailing" id="bmg-k2-Z8S"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="3Ae-hC-drL">
+                        <barButtonItem key="rightBarButtonItem" title="Done" id="R1w-Zz-40L">
+                            <color key="tintColor" red="0.32156862749999998" green="0.62352941179999999" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            <connections>
+                                <segue destination="cAB-gB-o5L" kind="show" id="1Js-JM-Dw2"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="webView" destination="FFM-uc-QWG" id="91F-IJ-7mn"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FRK-8A-sRz" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1239" y="926"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="grey_down.png" width="128" height="128"/>
+        <image name="grey_up.png" width="128" height="128"/>
+    </resources>
 </document>
